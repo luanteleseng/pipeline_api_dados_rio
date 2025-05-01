@@ -1,0 +1,23 @@
+[2025-04-30T13:26:24.193+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: adm_cor_comando_ocorrencias_abertas.carregar_dados_ocorrencias_abertas manual__2025-04-30T13:26:11.364126+00:00 [queued]>
+[2025-04-30T13:26:24.200+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: adm_cor_comando_ocorrencias_abertas.carregar_dados_ocorrencias_abertas manual__2025-04-30T13:26:11.364126+00:00 [queued]>
+[2025-04-30T13:26:24.201+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-30T13:26:24.210+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): carregar_dados_ocorrencias_abertas> on 2025-04-30 13:26:11.364126+00:00
+[2025-04-30T13:26:24.213+0000] {standard_task_runner.py:60} INFO - Started process 537 to run task
+[2025-04-30T13:26:24.215+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'adm_cor_comando_ocorrencias_abertas', 'carregar_dados_ocorrencias_abertas', 'manual__2025-04-30T13:26:11.364126+00:00', '--job-id', '264', '--raw', '--subdir', 'DAGS_FOLDER/adm_cor_comando.py', '--cfg-path', '/tmp/tmpb6zyxa6u']
+[2025-04-30T13:26:24.216+0000] {standard_task_runner.py:88} INFO - Job 264: Subtask carregar_dados_ocorrencias_abertas
+[2025-04-30T13:26:24.248+0000] {task_command.py:423} INFO - Running <TaskInstance: adm_cor_comando_ocorrencias_abertas.carregar_dados_ocorrencias_abertas manual__2025-04-30T13:26:11.364126+00:00 [running]> on host 81c910e0b178
+[2025-04-30T13:26:24.311+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='adm_cor_comando_ocorrencias_abertas' AIRFLOW_CTX_TASK_ID='carregar_dados_ocorrencias_abertas' AIRFLOW_CTX_EXECUTION_DATE='2025-04-30T13:26:11.364126+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-30T13:26:11.364126+00:00'
+[2025-04-30T13:26:24.324+0000] {logging_mixin.py:188} INFO - [clima_alagamento.alagamento_120min] Recriando tabela...
+[2025-04-30T13:26:24.338+0000] {logging_mixin.py:188} INFO - [clima_alagamento.alagamento_120min] Tabela criada e carregada.
+[2025-04-30T13:26:24.339+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_120min] Recriando tabela...
+[2025-04-30T13:26:24.349+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_120min] Tabela criada e carregada.
+[2025-04-30T13:26:24.349+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_15min] Recriando tabela...
+[2025-04-30T13:26:24.360+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_15min] Tabela criada e carregada.
+[2025-04-30T13:26:24.361+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Recriando tabela...
+[2025-04-30T13:26:24.393+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Tabela criada e carregada.
+[2025-04-30T13:26:24.394+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_30min] Recriando tabela...
+[2025-04-30T13:26:24.439+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_30min] Tabela criada e carregada.
+[2025-04-30T13:26:24.495+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-30T13:26:24.503+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=adm_cor_comando_ocorrencias_abertas, task_id=carregar_dados_ocorrencias_abertas, execution_date=20250430T132611, start_date=20250430T132624, end_date=20250430T132624
+[2025-04-30T13:26:24.547+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-30T13:26:24.559+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

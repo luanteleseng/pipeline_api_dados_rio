@@ -1,0 +1,15 @@
+[2025-04-30T13:24:17.111+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clima_alagamento_alagamento_detectado_ia.extrair_dados_alagamento_detectado_ia manual__2025-04-30T13:24:15.927809+00:00 [queued]>
+[2025-04-30T13:24:17.117+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clima_alagamento_alagamento_detectado_ia.extrair_dados_alagamento_detectado_ia manual__2025-04-30T13:24:15.927809+00:00 [queued]>
+[2025-04-30T13:24:17.117+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-30T13:24:17.126+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): extrair_dados_alagamento_detectado_ia> on 2025-04-30 13:24:15.927809+00:00
+[2025-04-30T13:24:17.130+0000] {standard_task_runner.py:60} INFO - Started process 290 to run task
+[2025-04-30T13:24:17.132+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'clima_alagamento_alagamento_detectado_ia', 'extrair_dados_alagamento_detectado_ia', 'manual__2025-04-30T13:24:15.927809+00:00', '--job-id', '242', '--raw', '--subdir', 'DAGS_FOLDER/clima_alagamento.py', '--cfg-path', '/tmp/tmpt_l_l4rp']
+[2025-04-30T13:24:17.134+0000] {standard_task_runner.py:88} INFO - Job 242: Subtask extrair_dados_alagamento_detectado_ia
+[2025-04-30T13:24:17.169+0000] {task_command.py:423} INFO - Running <TaskInstance: clima_alagamento_alagamento_detectado_ia.extrair_dados_alagamento_detectado_ia manual__2025-04-30T13:24:15.927809+00:00 [running]> on host 81c910e0b178
+[2025-04-30T13:24:17.233+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='clima_alagamento_alagamento_detectado_ia' AIRFLOW_CTX_TASK_ID='extrair_dados_alagamento_detectado_ia' AIRFLOW_CTX_EXECUTION_DATE='2025-04-30T13:24:15.927809+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-30T13:24:15.927809+00:00'
+[2025-04-30T13:24:17.236+0000] {logging_mixin.py:188} INFO - Extraindo dados da URL: https://api.dados.rio/v2/clima_alagamento/alagamento_detectado_ia/
+[2025-04-30T13:24:18.055+0000] {logging_mixin.py:188} INFO - [ERRO] Falha na extração: 500 Server Error: Internal Server Error for url: https://api.dados.rio/v2/clima_alagamento/alagamento_detectado_ia/
+[2025-04-30T13:24:18.056+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-30T13:24:18.062+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=clima_alagamento_alagamento_detectado_ia, task_id=extrair_dados_alagamento_detectado_ia, execution_date=20250430T132415, start_date=20250430T132417, end_date=20250430T132418
+[2025-04-30T13:24:18.106+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-30T13:24:18.122+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,16 @@
+[2025-04-27T02:47:51.630+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingestao_chuva_15min.carregar_dados scheduled__2025-04-27T02:30:00+00:00 [queued]>
+[2025-04-27T02:47:51.635+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingestao_chuva_15min.carregar_dados scheduled__2025-04-27T02:30:00+00:00 [queued]>
+[2025-04-27T02:47:51.635+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-27T02:47:51.643+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): carregar_dados> on 2025-04-27 02:30:00+00:00
+[2025-04-27T02:47:51.645+0000] {standard_task_runner.py:60} INFO - Started process 267 to run task
+[2025-04-27T02:47:51.647+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ingestao_chuva_15min', 'carregar_dados', 'scheduled__2025-04-27T02:30:00+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/ingestao_chuva_15min.py', '--cfg-path', '/tmp/tmpxrybwy81']
+[2025-04-27T02:47:51.648+0000] {standard_task_runner.py:88} INFO - Job 115: Subtask carregar_dados
+[2025-04-27T02:47:51.678+0000] {task_command.py:423} INFO - Running <TaskInstance: ingestao_chuva_15min.carregar_dados scheduled__2025-04-27T02:30:00+00:00 [running]> on host 2dd2145e61aa
+[2025-04-27T02:47:51.729+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ingestao_chuva_15min' AIRFLOW_CTX_TASK_ID='carregar_dados' AIRFLOW_CTX_EXECUTION_DATE='2025-04-27T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-27T02:30:00+00:00'
+[2025-04-27T02:47:51.738+0000] {logging_mixin.py:188} INFO - [clima_pluviometro] 🗑️ Dropando tabela 'clima_pluviometro' (se existir)...
+[2025-04-27T02:47:51.741+0000] {logging_mixin.py:188} INFO - [clima_pluviometro] 🚀 Criando nova tabela 'clima_pluviometro' com todos os Parquets...
+[2025-04-27T02:47:51.802+0000] {logging_mixin.py:188} INFO - [clima_pluviometro] ✅ Tabela 'clima_pluviometro' criada e populada com sucesso.
+[2025-04-27T02:47:51.834+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-27T02:47:51.840+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ingestao_chuva_15min, task_id=carregar_dados, execution_date=20250427T023000, start_date=20250427T024751, end_date=20250427T024751
+[2025-04-27T02:47:51.859+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-27T02:47:51.869+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

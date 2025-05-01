@@ -1,0 +1,26 @@
+[2025-04-27T03:54:12.056+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingestao_chuva_15min.carregar_dados scheduled__2025-04-27T03:30:00+00:00 [queued]>
+[2025-04-27T03:54:12.060+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingestao_chuva_15min.carregar_dados scheduled__2025-04-27T03:30:00+00:00 [queued]>
+[2025-04-27T03:54:12.060+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-04-27T03:54:12.068+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): carregar_dados> on 2025-04-27 03:30:00+00:00
+[2025-04-27T03:54:12.071+0000] {standard_task_runner.py:60} INFO - Started process 259 to run task
+[2025-04-27T03:54:12.072+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ingestao_chuva_15min', 'carregar_dados', 'scheduled__2025-04-27T03:30:00+00:00', '--job-id', '144', '--raw', '--subdir', 'DAGS_FOLDER/ingestao_chuva_15min.py', '--cfg-path', '/tmp/tmpev4nbx7r']
+[2025-04-27T03:54:12.074+0000] {standard_task_runner.py:88} INFO - Job 144: Subtask carregar_dados
+[2025-04-27T03:54:12.105+0000] {task_command.py:423} INFO - Running <TaskInstance: ingestao_chuva_15min.carregar_dados scheduled__2025-04-27T03:30:00+00:00 [running]> on host e7dfb49d70ed
+[2025-04-27T03:54:12.164+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ingestao_chuva_15min' AIRFLOW_CTX_TASK_ID='carregar_dados' AIRFLOW_CTX_EXECUTION_DATE='2025-04-27T03:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-27T03:30:00+00:00'
+[2025-04-27T03:54:12.165+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl/load.py", line 17, in carregar_parquets_para_duckdb
+    bronze_path, duckdb_path = setup_env()
+  File "/opt/airflow/dags/etl/load.py", line 12, in setup_env
+    raise ValueError("Variáveis de ambiente não configuradas corretamente (.env)")
+ValueError: Variáveis de ambiente não configuradas corretamente (.env)
+[2025-04-27T03:54:12.171+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=ingestao_chuva_15min, task_id=carregar_dados, execution_date=20250427T033000, start_date=20250427T035412, end_date=20250427T035412
+[2025-04-27T03:54:12.178+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 144 for task carregar_dados (Variáveis de ambiente não configuradas corretamente (.env); 259)
+[2025-04-27T03:54:12.204+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-27T03:54:12.215+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,19 @@
+[2025-04-30T03:00:04.285+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clima_pluviometro_precipitacao_30min.carregar_dados scheduled__2025-04-30T02:30:00+00:00 [queued]>
+[2025-04-30T03:00:04.290+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clima_pluviometro_precipitacao_30min.carregar_dados scheduled__2025-04-30T02:30:00+00:00 [queued]>
+[2025-04-30T03:00:04.290+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-30T03:00:04.299+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): carregar_dados> on 2025-04-30 02:30:00+00:00
+[2025-04-30T03:00:04.302+0000] {standard_task_runner.py:60} INFO - Started process 672 to run task
+[2025-04-30T03:00:04.304+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'clima_pluviometro_precipitacao_30min', 'carregar_dados', 'scheduled__2025-04-30T02:30:00+00:00', '--job-id', '200', '--raw', '--subdir', 'DAGS_FOLDER/clima_pluviometro.py', '--cfg-path', '/tmp/tmpkqnm0c3k']
+[2025-04-30T03:00:04.305+0000] {standard_task_runner.py:88} INFO - Job 200: Subtask carregar_dados
+[2025-04-30T03:00:04.336+0000] {task_command.py:423} INFO - Running <TaskInstance: clima_pluviometro_precipitacao_30min.carregar_dados scheduled__2025-04-30T02:30:00+00:00 [running]> on host 3c8b9e914942
+[2025-04-30T03:00:04.387+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='clima_pluviometro_precipitacao_30min' AIRFLOW_CTX_TASK_ID='carregar_dados' AIRFLOW_CTX_EXECUTION_DATE='2025-04-30T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-30T02:30:00+00:00'
+[2025-04-30T03:00:04.400+0000] {logging_mixin.py:188} INFO - [clima_alagamento.alagamento_120min] Recriando tabela...
+[2025-04-30T03:00:04.411+0000] {logging_mixin.py:188} INFO - [clima_alagamento.alagamento_120min] Tabela criada e carregada.
+[2025-04-30T03:00:04.412+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Recriando tabela...
+[2025-04-30T03:00:04.428+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Tabela criada e carregada.
+[2025-04-30T03:00:04.429+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_30min] Recriando tabela...
+[2025-04-30T03:00:04.445+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_30min] Tabela criada e carregada.
+[2025-04-30T03:00:04.475+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-30T03:00:04.482+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=clima_pluviometro_precipitacao_30min, task_id=carregar_dados, execution_date=20250430T023000, start_date=20250430T030004, end_date=20250430T030004
+[2025-04-30T03:00:04.517+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-30T03:00:04.529+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

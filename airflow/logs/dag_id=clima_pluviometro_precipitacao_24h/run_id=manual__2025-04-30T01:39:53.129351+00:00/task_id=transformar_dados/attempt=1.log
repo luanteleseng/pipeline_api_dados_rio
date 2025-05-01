@@ -1,0 +1,16 @@
+[2025-04-30T01:40:05.961+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clima_pluviometro_precipitacao_24h.transformar_dados manual__2025-04-30T01:39:53.129351+00:00 [queued]>
+[2025-04-30T01:40:05.965+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clima_pluviometro_precipitacao_24h.transformar_dados manual__2025-04-30T01:39:53.129351+00:00 [queued]>
+[2025-04-30T01:40:05.966+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-30T01:40:05.974+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): transformar_dados> on 2025-04-30 01:39:53.129351+00:00
+[2025-04-30T01:40:05.977+0000] {standard_task_runner.py:60} INFO - Started process 203 to run task
+[2025-04-30T01:40:05.979+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'clima_pluviometro_precipitacao_24h', 'transformar_dados', 'manual__2025-04-30T01:39:53.129351+00:00', '--job-id', '178', '--raw', '--subdir', 'DAGS_FOLDER/clima_pluviometro.py', '--cfg-path', '/tmp/tmpeb34lhzk']
+[2025-04-30T01:40:05.981+0000] {standard_task_runner.py:88} INFO - Job 178: Subtask transformar_dados
+[2025-04-30T01:40:06.012+0000] {task_command.py:423} INFO - Running <TaskInstance: clima_pluviometro_precipitacao_24h.transformar_dados manual__2025-04-30T01:39:53.129351+00:00 [running]> on host ff9afa844532
+[2025-04-30T01:40:06.067+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='clima_pluviometro_precipitacao_24h' AIRFLOW_CTX_TASK_ID='transformar_dados' AIRFLOW_CTX_EXECUTION_DATE='2025-04-30T01:39:53.129351+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-30T01:39:53.129351+00:00'
+[2025-04-30T01:40:06.069+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Processando: data/landing/clima_pluviometro/precipitacao_24h/ano=2025/mes=04/dia=30/precipitacao_24h_20250430_013954.json
+[2025-04-30T01:40:07.941+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Parquet salvo em: data/bronze/clima_pluviometro/precipitacao_24h/ano=2025/mes=04/dia=30/precipitacao_24h_20250430_014007.parquet
+[2025-04-30T01:40:07.942+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] JSON apagado: data/landing/clima_pluviometro/precipitacao_24h/ano=2025/mes=04/dia=30/precipitacao_24h_20250430_013954.json
+[2025-04-30T01:40:07.942+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-30T01:40:07.949+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=clima_pluviometro_precipitacao_24h, task_id=transformar_dados, execution_date=20250430T013953, start_date=20250430T014005, end_date=20250430T014007
+[2025-04-30T01:40:07.974+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-30T01:40:07.988+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,15 @@
+[2025-04-30T13:24:23.939+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vision_ai_ultima_atualizacao_cameras.extrair_dados_ultima_atualizacao_cameras manual__2025-04-30T13:24:22.377875+00:00 [queued]>
+[2025-04-30T13:24:23.944+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vision_ai_ultima_atualizacao_cameras.extrair_dados_ultima_atualizacao_cameras manual__2025-04-30T13:24:22.377875+00:00 [queued]>
+[2025-04-30T13:24:23.944+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-30T13:24:23.954+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): extrair_dados_ultima_atualizacao_cameras> on 2025-04-30 13:24:22.377875+00:00
+[2025-04-30T13:24:23.957+0000] {standard_task_runner.py:60} INFO - Started process 356 to run task
+[2025-04-30T13:24:23.960+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'vision_ai_ultima_atualizacao_cameras', 'extrair_dados_ultima_atualizacao_cameras', 'manual__2025-04-30T13:24:22.377875+00:00', '--job-id', '250', '--raw', '--subdir', 'DAGS_FOLDER/vision_ai.py', '--cfg-path', '/tmp/tmp4tnvw9fl']
+[2025-04-30T13:24:23.961+0000] {standard_task_runner.py:88} INFO - Job 250: Subtask extrair_dados_ultima_atualizacao_cameras
+[2025-04-30T13:24:23.993+0000] {task_command.py:423} INFO - Running <TaskInstance: vision_ai_ultima_atualizacao_cameras.extrair_dados_ultima_atualizacao_cameras manual__2025-04-30T13:24:22.377875+00:00 [running]> on host 81c910e0b178
+[2025-04-30T13:24:24.052+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='vision_ai_ultima_atualizacao_cameras' AIRFLOW_CTX_TASK_ID='extrair_dados_ultima_atualizacao_cameras' AIRFLOW_CTX_EXECUTION_DATE='2025-04-30T13:24:22.377875+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-30T13:24:22.377875+00:00'
+[2025-04-30T13:24:24.053+0000] {logging_mixin.py:188} INFO - Extraindo dados da URL: https://api.dados.rio/v2/vision_ai/ultima_atualizacao_cameras/
+[2025-04-30T13:24:24.864+0000] {logging_mixin.py:188} INFO - [ERRO] Falha na extração: 500 Server Error: Internal Server Error for url: https://api.dados.rio/v2/vision_ai/ultima_atualizacao_cameras/
+[2025-04-30T13:24:24.865+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-30T13:24:24.872+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=vision_ai_ultima_atualizacao_cameras, task_id=extrair_dados_ultima_atualizacao_cameras, execution_date=20250430T132422, start_date=20250430T132423, end_date=20250430T132424
+[2025-04-30T13:24:24.894+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-30T13:24:24.910+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

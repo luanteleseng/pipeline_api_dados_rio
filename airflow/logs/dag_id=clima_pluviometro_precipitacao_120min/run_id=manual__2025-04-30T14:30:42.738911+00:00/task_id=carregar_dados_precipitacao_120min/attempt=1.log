@@ -1,0 +1,27 @@
+[2025-04-30T14:30:46.787+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clima_pluviometro_precipitacao_120min.carregar_dados_precipitacao_120min manual__2025-04-30T14:30:42.738911+00:00 [queued]>
+[2025-04-30T14:30:46.792+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clima_pluviometro_precipitacao_120min.carregar_dados_precipitacao_120min manual__2025-04-30T14:30:42.738911+00:00 [queued]>
+[2025-04-30T14:30:46.793+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-30T14:30:46.801+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): carregar_dados_precipitacao_120min> on 2025-04-30 14:30:42.738911+00:00
+[2025-04-30T14:30:46.804+0000] {standard_task_runner.py:60} INFO - Started process 328 to run task
+[2025-04-30T14:30:46.805+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'clima_pluviometro_precipitacao_120min', 'carregar_dados_precipitacao_120min', 'manual__2025-04-30T14:30:42.738911+00:00', '--job-id', '277', '--raw', '--subdir', 'DAGS_FOLDER/clima_pluviometro.py', '--cfg-path', '/tmp/tmpki2buph3']
+[2025-04-30T14:30:46.806+0000] {standard_task_runner.py:88} INFO - Job 277: Subtask carregar_dados_precipitacao_120min
+[2025-04-30T14:30:46.834+0000] {task_command.py:423} INFO - Running <TaskInstance: clima_pluviometro_precipitacao_120min.carregar_dados_precipitacao_120min manual__2025-04-30T14:30:42.738911+00:00 [running]> on host 8c2672e2ea19
+[2025-04-30T14:30:46.879+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='clima_pluviometro_precipitacao_120min' AIRFLOW_CTX_TASK_ID='carregar_dados_precipitacao_120min' AIRFLOW_CTX_EXECUTION_DATE='2025-04-30T14:30:42.738911+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-30T14:30:42.738911+00:00'
+[2025-04-30T14:30:46.889+0000] {logging_mixin.py:188} INFO - [clima_alagamento.alagamento_120min] Recriando tabela...
+[2025-04-30T14:30:46.899+0000] {logging_mixin.py:188} INFO - [clima_alagamento.alagamento_120min] Tabela criada e carregada.
+[2025-04-30T14:30:46.900+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_120min] Recriando tabela...
+[2025-04-30T14:30:46.908+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_120min] Tabela criada e carregada.
+[2025-04-30T14:30:46.908+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_15min] Recriando tabela...
+[2025-04-30T14:30:46.918+0000] {logging_mixin.py:188} INFO - [clima_radar.precipitacao_15min] Tabela criada e carregada.
+[2025-04-30T14:30:46.919+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_6h] Recriando tabela...
+[2025-04-30T14:30:46.927+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_6h] Tabela criada e carregada.
+[2025-04-30T14:30:46.928+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Recriando tabela...
+[2025-04-30T14:30:46.948+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_24h] Tabela criada e carregada.
+[2025-04-30T14:30:46.948+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_30min] Recriando tabela...
+[2025-04-30T14:30:46.979+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_30min] Tabela criada e carregada.
+[2025-04-30T14:30:46.979+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_120min] Recriando tabela...
+[2025-04-30T14:30:46.986+0000] {logging_mixin.py:188} INFO - [clima_pluviometro.precipitacao_120min] Tabela criada e carregada.
+[2025-04-30T14:30:47.047+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-30T14:30:47.054+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=clima_pluviometro_precipitacao_120min, task_id=carregar_dados_precipitacao_120min, execution_date=20250430T143042, start_date=20250430T143046, end_date=20250430T143047
+[2025-04-30T14:30:47.098+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-30T14:30:47.111+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
