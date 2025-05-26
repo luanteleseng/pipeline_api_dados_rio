@@ -17,17 +17,33 @@ Extrair dados de diferentes endpoints da API Dados.Rio, realizar transformaçõe
 
 ```
 pipeline_api_dados_rio/
-├── dags/ # Workflows do Airflow organizados por tema
-│ ├── clima/
-│ ├── vision_ai/
-│ └── adm_cor_comando/
-├── scripts/ # Scripts de transformação e utilitários
-├── data/ # Armazenamento dos dados locais
-│ ├── raw/ # Dados brutos
-│ └── processed/ # Dados limpos e organizados
-├── streamlit_app/ # Aplicação de visualização interativa
-├── utils/ # Funções auxiliares
-├── requirements.txt # Dependências Python
-├── docker-compose.yml # Configuração do ambiente Docker + Airflow
-└── README.md # Descrição do projeto
+├── airflow/
+│   ├── dags/
+│   │   ├── adm_cor_comando.py
+│   │   ├── clima_alagamento.py
+│   │   ├── clima_pluviometro.py
+│   │   ├── clima_radar.py
+│   │   └── vision_ai.py
+│   ├── etl/
+│   │   ├── __init__.py
+│   │   ├── extract.py
+│   │   ├── load.py
+│   │   ├── transform.py
+│   │   └── utils.py
+├── data/
+│   ├── bronze/
+│   │   ├── clima_alagamento/
+│   │   ├── clima_pluviometro/
+│   │   └── clima_radar/
+│   └── db/
+│       └── duckdb_database.db
+├── logs/
+├── config/
+│   └── .env
+├── streamlit/
+│   └── app.py
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
+
 ```
