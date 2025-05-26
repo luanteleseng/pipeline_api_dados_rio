@@ -15,6 +15,7 @@ Extrair dados de diferentes endpoints da API Dados.Rio, realizar transformaçõe
   
 ## Estrutura do projeto
 
+```
 pipeline_api_dados_rio/
 ├── dags/ # Workflows do Airflow organizados por tema
 │ ├── clima/
@@ -29,3 +30,4 @@ pipeline_api_dados_rio/
 ├── requirements.txt # Dependências Python
 ├── docker-compose.yml # Configuração do ambiente Docker + Airflow
 └── README.md # Descrição do projeto
+```
